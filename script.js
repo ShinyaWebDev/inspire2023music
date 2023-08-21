@@ -53,7 +53,7 @@ panControl.addEventListener("input", () => {
   gainNodeR.gain.value = 1; // Keep right channel (instrumental) constant
 
   // Calculate opacity based on the slider value
-  const opacity = 0.9 * panControl.value + 0.1;
+  const opacity = panControl.value;
 
   imageElement.style.opacity = opacity;
 });
