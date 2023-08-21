@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Andika&family=Comic+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <title>Music Player</title>
+  </head>
+  <body>
+    <audio id="instrumental" src="audio/music.mp3" preload="metadata"></audio>
+    <audio id="vocal" src="audio/vocal.mp3" preload="metadata"></audio>
+    <audio id="karaoke" src="audio/musicRL.mp3" preload="metadata"></audio>
+    <div id="lyrics-container">
+      <h4 id="under-the-sea">
+        <span id="line1">The seaweed is always greener </span>
+        <br />
+        <span id="line2">In somebody else's lake</span><br />
+        <span id="line3">You dream about going up there</span><br />
+        <span id="line4">But that is a big mistake</span><br />
+        <span id="line5">Just look at the world around you</span><br />
+        <span id="line6">Right here on the ocean floor</span><br />
+        <span id="line7">Such wonderful things surround you</span><br />
+        <span id="line8">What more is you lookin'for?</span>
+        <br />
+
+        <br />
+        <span id="line9"> Under the sea. Under the sea </span><br />
+        <span id="line10"> Darling it's better </span><br />
+        <span id="line11">Down where it's wetter </span><br />
+        <span id="line12">Take it from me </span><br />
+        <span id="line13"> Up on the shore they work all day</span><br />
+        <span id="line14"> Out in the sun they slave away</span><br />
+        <span id="line15">
+          While we devotin' Full time to floatin' Under the sea</span
+        ><br /><br />
+
+        <span id="line16"> Down here all the fish is happy</span><br />
+        <span id="line17">As off through the waves they roll</span><br />
+        <span id="line18">The fish on the land ain't happy</span><br />
+        <span id="line19">They sad 'cause they in their bowl</span><br />
+        <span id="line20">But fish in the bowl is lucky</span><br />
+        <span id="line21">They in for a worser fate</span><br />
+        <span id="line22">One day when the boss get hungry </span><br />
+        <span id="line23">Guess who's gon' be on the plate?</span>
+
+        <br /><br />
+        <span id="line24">Oh, no, Under the sea. Under the sea </span><br />
+
+        <span id="line25">
+          Nobody beat us, Fry us and eat us, In fricassee </span
+        ><br />
+        <span id="line26">We what the land folks loves to cook </span><br />
+        <span id="line27">Under the sea we off the hook</span><br />
+        <span id="line28">We got no troubles</span><br />
+        <span id="line29">Life is the bubbles Under the sea. Under the sea</span
+        ><br />
+        <span id="line30">Since life is sweet here</span><br />
+        <span id="line31">We got the beat here, Naturally</span><br />
+        <span id="line32">Even the sturgeon and the ray</span><br />
+        <span id="line33">They get the urge 'n' start to play</span><br />
+        <span id="line34">We got the spirit</span><br />
+        <span id="line35">You got to hear it Under the sea.</span><br />
+      </h4>
+      <h4 id="how-far-go" style="display: none; padding-top: 10px">
+        <span id="line36"> I know everybody on this island </span><br />
+        <span id="line37">Seems so happy on this island</span><br />
+        <span id="line38">Everything is by design</span><br />
+        <span id="line385">I know everybody on this island </span><br />
+        <span id="line39">Has a role on this island</span><br />
+        <span id="line40">So maybe I can roll with mine</span><br />
+        <br />
+
+        <span id="line41"> I can lead with pride, I can make us strong </span
+        ><br />
+        <span id="line42"> I'll be satisfied if I play along </span><br />
+        <span id="line43">But the voice inside sings a different song </span
+        ><br />
+        <span id="line44"> What is wrong with me? </span><br />
+        <br />
+
+        <span id="line45">
+          See the light as it shines on the sea, it's blinding </span
+        ><br />
+        <span id="line46"> But no one knows how deep it goes </span><br />
+        <span id="line47">
+          And it seems like it's calling out to me, so come find me </span
+        ><br />
+        <span id="line48"> And let me know what's beyond that line </span><br />
+        <span id="line49">Will I cross that line? </span><br />
+
+        <br />
+        <span id="line50">
+          See the line where the sky meets the sea, it calls me </span
+        ><br />
+        <span id="line51"> And no one knows how far it goes </span><br />
+        <span id="line52">
+          If the wind in my sail on the sea stays behind me </span
+        ><br />
+        <span id="line53"> One day I'll know how far I'll go </span><br />
+      </h4>
+    </div>
+
+    <div class="audio-player">
+      <div>
+        <img
+          id="progressImage"
+          src="img/seba.png"
+          alt="moana-icon"
+          class="icons"
+        />
+
+        <input
+          class="volume_control progress win10-thumb"
+          type="range"
+          id="panControl"
+          min="0"
+          max="1"
+          step="0.01"
+          value="1"
+        />
+      </div>
+
+      <div class="audio-container">
+        <input
+          class="progress"
+          type="range"
+          min="0"
+          max="100"
+          step="1"
+          value="0"
+          id="progressBar"
+          oninput="seekMusic()"
+        />
+        <div class="container">
+          <label for="checkbox" onclick="togglePlayPause()">
+            <div class="play_pause_icon play"></div>
+          </label>
+          <input type="checkbox" id="checkbox" />
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
