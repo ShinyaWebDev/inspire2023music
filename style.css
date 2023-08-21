@@ -6,7 +6,7 @@ body {
 #lyrics-container {
   overflow: auto; /* Adds scroll bars if needed */
   height: calc(
-    100vh - 180px
+    100vh - 280px
   ); /* You can set this to whatever height fits your design */
   width: 100%; /* Adjust the width as necessary */
 }
